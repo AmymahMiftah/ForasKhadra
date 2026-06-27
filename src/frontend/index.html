@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرص خضراء — البحث الذكي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Top Navigation  -->
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">🌿 فرص خضراء</a>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">⌕</span>
+      <input
+        id="nav-search-input"
+        type="text"
+        class="nav-search-input"
+        placeholder="ابحث عن منحة، تدريب، وظيفة"
+        autocomplete="off"
+        oninput="liveFilter(this.value)"
+        onkeydown="if(event.key==='Enter') doSearch()"
+      />
+    </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="switchTab('search', this)">البحث الذكي</button>
+      <button class="nav-tab" onclick="switchTab('chat', this)">المساعد الذكي</button>
+    </div>
+  </div>
+</nav>
+
+<!-- 
+     TAB: SEARCH
+ -->
+<div id="tab-search">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">ابحث عن الفرص المتاحة </h1>
+      <p class="hero-sub">
+        800+ فرصة ومنحة — يفهم محركنا الذكي ما تقصده بالعربية أو الإنجليزية أو كليهما
+      </p>
+      <div class="hero-search-row">
+        <input
+          id="hero-search-input"
+          type="text"
+          class="hero-input"
+          placeholder="ابحث عن منحة، تدريب، وظيفة"
+          autocomplete="off"
+          onkeydown="if(event.key==='Enter') doSearch()"
+        />
+        <button class="hero-btn" onclick="doSearch()">بحث</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="filters-bar">
+    <span class="filter-label">تصفية:</span>
+    <button class="filter-chip active" onclick="filterType('all', this)">الكل</button>
+    <button class="filter-chip" onclick="filterType('scholarship', this)">منح دراسية</button>
+    <button class="filter-chip" onclick="filterType('internship', this)">تدريب</button>
+    <button class="filter-chip" onclick="filterType('job', this)">وظائف</button>
+    <button class="filter-chip" onclick="filterType('summer_school', this)">مدارس صيفية</button>
+  </div>
+
+  <!-- Results -->
+  <div class="main-content">
+    <div class="section-header">
+      <span class="section-title" id="section-title">الفرص المتاحة</span>
+      <span class="section-count" id="section-count"></span>
+    </div>
+    <div class="cards-grid" id="cards-grid">
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon">🔍</div>
+        <p>ابحث عن فرصة أو اختر تصفية لعرض النتائج</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  
+<footer class="site-footer">
+  <p>فرص خضراء — بحث دلالي متعدد اللغات مدعوم بالذكاء الاصطناعي &nbsp;|&nbsp;
+  <a href="https://www.foraskhadra.com" target="_blank">foraskhadra.com</a></p>
+</footer>
+
+<script src="search.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
