@@ -1,8 +1,7 @@
 # Code Walkthrough — Foras Khadra Smart Search
 
 
-[![Watch Demo](screenshot.png)](https://youtu.be/HuCsCaxyoRI)
-
+Demo Video: https://youtu.be/HuCsCaxyoRI
 
 This document walks through every file I wrote, what it does, and why I made the decisions I made instead of other options.
 
